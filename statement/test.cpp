@@ -3,6 +3,8 @@
 //
 
 #include <iostream>
+#include "Activity.h"
+#include "OnTouchEventListener.h"
 
 using namespace std;
 
@@ -35,5 +37,19 @@ void testDoWhile() {
 int main() {
 
     testDoWhile();
+    auto listener = new OnTouchEventListener();
+    listener->onTouchBegin = []() {
+        cout << "touch begin" << endl;
+    };
+
+    listener->onTouchEnd = []() {
+
+        cout << "touch end" << endl;
+    };
+
+
+    auto act = new Activity();
+    act->setTouchListener(listener);
+    act->touch();
     return 0;
 }
