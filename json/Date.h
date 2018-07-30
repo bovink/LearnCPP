@@ -5,10 +5,32 @@
 #ifndef LEARNCPP_DATE_H
 #define LEARNCPP_DATE_H
 
+#include <string>
+#include "json.hpp"
 
-class Date {
+using namespace std;
+using json = nlohmann::json;
 
-};
+namespace date {
+
+    class Date {
+
+    public:
+        const string &getToday() const;
+
+        void setToday(const string &today);
+
+    private:
+
+        string today;
+
+
+    };
+
+    void to_json(json &j, const Date &m);
+
+    void from_json(const json &j, Date &m);
+}
 
 
 #endif //LEARNCPP_DATE_H
