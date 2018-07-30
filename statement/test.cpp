@@ -34,22 +34,22 @@ void testDoWhile() {
     cout << "end" << endl;
 }
 
-int main() {
-
-    testDoWhile();
-    auto listener = new OnTouchEventListener();
-    listener->onTouchBegin = []() {
-        cout << "touch begin" << endl;
-    };
-
-    listener->onTouchEnd = []() {
-
-        cout << "touch end" << endl;
-    };
-
-
-    auto act = new Activity();
-    act->setTouchListener(listener);
-    act->touch();
-    return 0;
-}
+//int main() {
+//
+//    testDoWhile();
+//    auto listener = new OnTouchEventListener();
+//    listener->onTouchBegin = []() {
+//        cout << "touch begin" << endl;
+//    };
+//
+//    listener->onTouchEnd = []() {
+//
+//        cout << "touch end" << endl;
+//    };
+//
+//
+//    auto act = new Activity();
+//    act->setTouchListener(listener);
+//    act->touch();
+//    return 0;
+//}
