@@ -2,6 +2,7 @@
 // Created by 吴宗刚 on 2018/7/30.
 //
 
+#include <iostream>
 #include "Model.h"
 
 int model::Model::getType() const {
@@ -43,9 +44,11 @@ void model::from_json(const json &j, model::Model &m) {
     int type = m.getType();
     if (type == 0) {
 
-        m.setModel(&j.at("model").get<date::Date>());
+        date::Date d = j.at("model").get<date::Date>();
+        m.setModel(&d);
     } else if (type == 1) {
 
-        m.setModel(&j.at("model").get<person::Person>());
+        person::Person p = j.at("model").get<person::Person>();
+        m.setModel(&p);
     }
 }
