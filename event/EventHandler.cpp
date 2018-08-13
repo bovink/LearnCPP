@@ -3,3 +3,12 @@
 //
 
 #include "EventHandler.h"
+
+
+Event::Event() {
+
+}
+
+//void Event::perform() {
+//
+//}

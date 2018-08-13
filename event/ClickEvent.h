@@ -5,9 +5,11 @@
 #ifndef LEARNCPP_CLICKEVENT_H
 #define LEARNCPP_CLICKEVENT_H
 
+#include "EventHandler.h"
 
-class ClickEvent {
-
+class ClickEvent : public Event {
+public:
+    void perform() override;
 };
 
 

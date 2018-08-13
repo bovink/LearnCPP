@@ -3,3 +3,10 @@
 //
 
 #include "ClickEvent.h"
+
+//void ClickEvent::perform() {
+//
+//}
+void ClickEvent::perform() {
+
+}

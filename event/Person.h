@@ -5,9 +5,18 @@
 #ifndef LEARNCPP_PERSON_H
 #define LEARNCPP_PERSON_H
 
+#include "EventHandler.h"
 
 class Person {
 
+public:
+
+    void init();
+
+    void click();
+
+private:
+    EventHandler handler;
 };
 
 

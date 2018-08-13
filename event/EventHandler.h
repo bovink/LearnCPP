@@ -6,8 +6,32 @@
 #define LEARNCPP_EVENTHANDLER_H
 
 
+#include <vector>
+
+using namespace std;
+
+class Event;
+
 class EventHandler {
 
+public:
+
+//    void performEvent(Event e);
+//
+//    void subscribeEvnet(Event e);
+//
+//    void unsubscribeEvent(Event e);
+
+private:
+
+    vector<Event> clickEvents;
+};
+
+class Event {
+public:
+    Event();
+
+    virtual void perform() = 0;
 };
 
 

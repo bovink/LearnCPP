@@ -3,3 +3,13 @@
 //
 
 #include "Person.h"
+
+void Person::init() {
+
+    handler = EventHandler();
+}
+
+void Person::click() {
+
+//    handler.handleEvnet(event);
+}
