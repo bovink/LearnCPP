@@ -16,9 +16,10 @@ class EventHandler {
 
 public:
 
-    void performKeyboardEvent();
 
     void subscribeEvent(Event* e);
+
+    void notify();
 
 private:
 
@@ -27,7 +28,6 @@ private:
 
 class Event {
 public:
-    Event();
 
     virtual void perform() = 0;
 };

@@ -9,7 +9,6 @@ int main() {
     auto keyboard =new  Keyboard();
     handler.subscribeEvent(keyboard);
 
-    Person person = Person(handler);
-    person.clickKeyboard();
+    handler.notify();
     return 0;
 }

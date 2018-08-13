@@ -5,19 +5,15 @@
 #include "EventHandler.h"
 
 
-Event::Event() {
-
-}
-
-
-void EventHandler::performKeyboardEvent() {
-
-    for (int i = 0; i < clickEvents.size(); ++i) {
-        clickEvents.at(i)->perform();
-    }
-}
 
 void EventHandler::subscribeEvent(Event *e) {
 
     clickEvents.push_back(e);
+}
+
+void EventHandler::notify() {
+
+    for (int i = 0; i < clickEvents.size(); ++i) {
+        clickEvents.at(i)->perform();
+    }
 }

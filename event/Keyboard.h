@@ -7,7 +7,7 @@
 
 #include "EventHandler.h"
 
-class Keyboard : public Event{
+class Keyboard : public Event {
 public:
     void perform() override;
 
