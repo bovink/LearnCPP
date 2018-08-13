@@ -5,8 +5,11 @@
 #ifndef LEARNCPP_KEYBOARD_H
 #define LEARNCPP_KEYBOARD_H
 
+#include "EventHandler.h"
 
-class Keyboard {
+class Keyboard : public Event{
+public:
+    void perform() override;
 
 };
 

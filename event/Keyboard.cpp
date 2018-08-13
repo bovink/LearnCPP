@@ -3,3 +3,11 @@
 //
 
 #include "Keyboard.h"
+#include <iostream>
+
+
+void Keyboard::perform() {
+
+    cout << "click keyboard" << endl;
+
+}

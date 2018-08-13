@@ -11,12 +11,13 @@ class Person {
 
 public:
 
-    void init();
+    Person(EventHandler handler);
 
-    void click();
+
+    void clickKeyboard();
 
 private:
-    EventHandler handler;
+    EventHandler _handler;
 };
 
 

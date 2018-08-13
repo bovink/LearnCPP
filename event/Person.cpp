@@ -5,13 +5,14 @@
 #include "Person.h"
 #include "ClickEvent.h"
 
-void Person::init() {
 
-    handler = EventHandler();
+void Person::clickKeyboard() {
+
+    _handler.performKeyboardEvent();
 }
 
-void Person::click() {
+Person::Person(EventHandler handler) {
 
-    auto event = new ClickEvent();
-    handler.performEvent(event);
+    _handler = handler;
 }
+

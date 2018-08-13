@@ -9,7 +9,15 @@ Event::Event() {
 
 }
 
-void EventHandler::performEvent(Event* e) {
 
-    e->perform();
+void EventHandler::performKeyboardEvent() {
+
+    for (int i = 0; i < clickEvents.size(); ++i) {
+        clickEvents.at(i)->perform();
+    }
+}
+
+void EventHandler::subscribeEvent(Event *e) {
+
+    clickEvents.push_back(e);
 }
