@@ -17,13 +17,15 @@ class EventHandler {
 public:
 
 
-    void subscribeEvent(Event* e);
+    void subscribeEvent(Event *e);
+
+    void unsubscribeEvent(Event *e);
 
     void notify();
 
 private:
 
-    vector<Event*> clickEvents;
+    vector<Event *> clickEvents;
 };
 
 class Event {

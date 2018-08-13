@@ -14,8 +14,6 @@ public:
     Person(EventHandler handler);
 
 
-    void clickKeyboard();
-
 private:
     EventHandler _handler;
 };

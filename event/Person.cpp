@@ -6,10 +6,6 @@
 #include "ClickEvent.h"
 
 
-void Person::clickKeyboard() {
-
-    _handler.performKeyboardEvent();
-}
 
 Person::Person(EventHandler handler) {
 
