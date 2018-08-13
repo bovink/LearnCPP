@@ -3,6 +3,7 @@
 //
 
 #include "Person.h"
+#include "ClickEvent.h"
 
 void Person::init() {
 
@@ -11,5 +12,6 @@ void Person::init() {
 
 void Person::click() {
 
-//    handler.handleEvnet(event);
+    auto event = new ClickEvent();
+    handler.performEvent(event);
 }

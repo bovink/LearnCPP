@@ -9,6 +9,7 @@ Event::Event() {
 
 }
 
-//void Event::perform() {
-//
-//}
+void EventHandler::performEvent(Event* e) {
+
+    e->perform();
+}

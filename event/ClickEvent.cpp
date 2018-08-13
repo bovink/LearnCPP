@@ -3,10 +3,12 @@
 //
 
 #include "ClickEvent.h"
+#include <iostream>
 
 //void ClickEvent::perform() {
 //
 //}
 void ClickEvent::perform() {
 
+    cout << "perform click" << endl;
 }

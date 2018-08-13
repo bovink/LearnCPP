@@ -1,6 +1,9 @@
 #include <iostream>
+#include "event/Person.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+
+    Person person = Person();
+    person.click();
     return 0;
 }

@@ -16,7 +16,7 @@ class EventHandler {
 
 public:
 
-//    void performEvent(Event e);
+    void performEvent(Event* e);
 //
 //    void subscribeEvnet(Event e);
 //
