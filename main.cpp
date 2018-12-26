@@ -5,25 +5,34 @@
 using namespace std;
 static const int num_threads = 10;
 
-void call_from_thread(int i) {
-//    std::cout << "Hello, World:\n" ;
-    cout << i << "\n";
+void call_another() {
+    for (int i = 0; i < 10; ++i) {
+
+        cout << "other" << endl;
+        std::chrono::milliseconds duration(1000);
+        this_thread::sleep_for(duration);
+    }
 }
 
-int main() {
-    thread t[num_threads];
-    for (int i = 0; i < num_threads; ++i) {
-        t[i] = thread(call_from_thread, i);
+void call_from_thread() {
+    thread t = thread(call_another);
+    t.detach();
+
+    for (int i = 0; i < 10; ++i) {
+
+        cout << i << endl;
+        std::chrono::milliseconds duration(1000);
+        this_thread::sleep_for(duration);
     }
 
+}
+
+
+int main() {
+    thread t = thread(call_from_thread);
+    t.join();
     cout << "Launched from main thread\n";
 
-    for (int j = 0; j < num_threads; ++j) {
-        t[j].join();
-    }
-
-//    auto test = TestThread("测试");
-//    test.startThread();
 
     return 0;
 }
