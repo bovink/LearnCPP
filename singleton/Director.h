@@ -17,6 +17,8 @@ public:
 
     void changeValue(int **pInt);
 
+    void chane(int **pInt);
+
 };
 
 

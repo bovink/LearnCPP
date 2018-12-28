@@ -19,6 +19,11 @@ Director *Director::getInstance() {
 
 void Director::changeValue(int **pInt) {
 
+    chane(pInt);
+}
+
+void Director::chane(int **pInt) {
+
     **pInt = 0;
 }
 
