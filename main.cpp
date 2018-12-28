@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "thread/TestThread.h"
+#include "singleton/Director.h"
 
 using namespace std;
 static const int num_threads = 10;
@@ -29,9 +30,11 @@ void call_from_thread() {
 
 
 int main() {
-    thread t = thread(call_from_thread);
-    t.join();
-    cout << "Launched from main thread\n";
+//    thread t = thread(call_from_thread);
+//    t.join();
+//    cout << "Launched from main thread\n";
+
+    auto dir = Director::getInstance();
 
 
     return 0;

@@ -8,6 +8,13 @@
 
 class Director {
 
+private:
+    Director();
+
+    static Director* s_director;
+public:
+    static Director *getInstance();
+
 };
 
 
