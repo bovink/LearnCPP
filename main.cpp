@@ -36,6 +36,15 @@ int main() {
 
     auto dir = Director::getInstance();
 
+    int i = 10;
+
+    int *pInt = &i;
+
+    dir->changeValue(&pInt);
+
+    cout << i << endl;
+    cout << *pInt << endl;
+
 
     return 0;
 }

@@ -15,6 +15,8 @@ private:
 public:
     static Director *getInstance();
 
+    void changeValue(int **pInt);
+
 };
 
 

@@ -4,6 +4,7 @@
 
 #include "Director.h"
 
+Director *Director::s_director = nullptr;
 
 Director::Director() {
 
@@ -15,3 +16,10 @@ Director *Director::getInstance() {
     }
     return s_director;
 }
+
+void Director::changeValue(int **pInt) {
+
+    **pInt = 0;
+}
+
+
