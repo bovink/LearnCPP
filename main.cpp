@@ -40,10 +40,13 @@ int main() {
 
     int *pInt = &i;
 
-    dir->changeValue(&pInt);
+    int **pInt1 = &pInt;
+
+    dir->changeValue(*pInt1);
 
     cout << i << endl;
     cout << *pInt << endl;
+    cout << **pInt1 << endl;
 
 
     return 0;

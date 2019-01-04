@@ -27,4 +27,8 @@ void Director::chane(int **pInt) {
     **pInt = 0;
 }
 
+void Director::changeValue(int *pInt) {
+    *pInt = 111;
+}
+
 
