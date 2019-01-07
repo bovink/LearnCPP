@@ -2,39 +2,24 @@
 // Created by 吴宗刚 on 2019/1/7.
 //
 
-#include "vartype.h"
-#include <iostream>
 
-using namespace std;
-class person {
+void testInitVar() {
+    // 整型
+    int i = 1;
+    long l = 1;
+    short s = 1;
 
-public:
-    char* name;
+    // 浮点型
+    float f = 0.1;
+    double d = 0.1;
 
-    void setName(char names[]);
+    // 布尔型
+    bool b = true;
 
-public:
-
-    void printName();
-};
-
-
-void person::setName(char names[]) {
-
-    name = names;
-}
-
-void person::printName() {
-
-    cout << *name << endl;
+    // 字符型
+    char c = 'a';
 }
 
 int main() {
-
-    auto p = new person();
-    char n[] = "aaa";
-    p->setName(n);
-    p->printName();
-
     return 0;
 }
