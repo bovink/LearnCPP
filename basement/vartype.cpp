@@ -2,6 +2,9 @@
 // Created by 吴宗刚 on 2019/1/7.
 //
 
+#include <iostream>
+
+using namespace std;
 
 void testInitVar() {
     // 整型
@@ -20,6 +23,39 @@ void testInitVar() {
     char c = 'a';
 }
 
+void testPointer() {
+
+    int i = 1;
+    int *pi = &i;
+    int **ppi = &pi;
+
+    int **newppi = ppi;
+
+    **newppi = 12;
+
+    cout << i << endl;
+    cout << *pi << endl;
+    cout << **ppi << endl;
+
+    **ppi = 10;
+    cout << i << endl;
+    cout << *pi << endl;
+    cout << **ppi << endl;
+
+    *pi = 9;
+    cout << i << endl;
+    cout << *pi << endl;
+    cout << **ppi << endl;
+
+    i = 8;
+
+    cout << i << endl;
+    cout << *pi << endl;
+    cout << **ppi << endl;
+
+}
+
 int main() {
+    testPointer();
     return 0;
 }
