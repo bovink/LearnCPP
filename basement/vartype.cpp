@@ -71,7 +71,21 @@ void testArray() {
     }
 }
 
+// 可读可写
+void testReference(int &i) {
+
+    i = 1;
+}
+
+// 只可读
+void testReference(const int &i) {
+
+    cout << i << endl;
+}
+
 int main() {
-    testArray();
+    const int &i = 0;
+    testReference(i);
+    cout << i << endl;
     return 0;
 }
