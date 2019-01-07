@@ -29,25 +29,25 @@ void call_from_thread() {
 }
 
 
-int main() {
+//int main() {
 //    thread t = thread(call_from_thread);
 //    t.join();
 //    cout << "Launched from main thread\n";
 
-    auto dir = Director::getInstance();
+//    auto dir = Director::getInstance();
+//
+//    int i = 10;
+//
+//    int *pInt = &i;
+//
+//    int **pInt1 = &pInt;
+//
+//    dir->changeValue(*pInt1);
+//
+//    cout << i << endl;
+//    cout << *pInt << endl;
+//    cout << **pInt1 << endl;
 
-    int i = 10;
 
-    int *pInt = &i;
-
-    int **pInt1 = &pInt;
-
-    dir->changeValue(*pInt1);
-
-    cout << i << endl;
-    cout << *pInt << endl;
-    cout << **pInt1 << endl;
-
-
-    return 0;
-}
+//    return 0;
+//}
