@@ -55,7 +55,23 @@ void testPointer() {
 
 }
 
+void testString() {
+
+    string s = "abcd";
+    size_t l = strlen(s.c_str());
+    cout << l << endl;
+}
+
+void testArray() {
+    char chars[] = "abcd";
+    int l = sizeof(chars);
+    cout << l << endl;
+    for (int i = 0; i < l; ++i) {
+        cout << chars[i] << endl;
+    }
+}
+
 int main() {
-    testPointer();
+    testArray();
     return 0;
 }
