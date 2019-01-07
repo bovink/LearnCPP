@@ -36,22 +36,32 @@ void testPointer() {
     cout << i << endl;
     cout << *pi << endl;
     cout << **ppi << endl;
+    cout << "========" << endl;
 
     **ppi = 3;
     cout << i << endl;
     cout << *pi << endl;
     cout << **ppi << endl;
+    cout << "========" << endl;
+    int x = 1;
+    *ppi = &x;
+    cout << i << endl;
+    cout << *pi << endl;
+    cout << **ppi << endl;
 
+    cout << "========" << endl;
     *pi = 4;
     cout << i << endl;
     cout << *pi << endl;
     cout << **ppi << endl;
+    cout << "========" << endl;
 
     i = 5;
 
     cout << i << endl;
     cout << *pi << endl;
     cout << **ppi << endl;
+    cout << "========" << endl;
 
 }
 
@@ -83,9 +93,14 @@ void testReference(const int &i) {
     cout << i << endl;
 }
 
+void testPointer(int *pi) {
+
+    *pi = 10;
+}
+
 int main() {
-    const int &i = 0;
-    testReference(i);
-    cout << i << endl;
+
+    testPointer();
+
     return 0;
 }
