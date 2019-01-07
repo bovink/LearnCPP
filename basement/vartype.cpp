@@ -31,23 +31,23 @@ void testPointer() {
 
     int **newppi = ppi;
 
-    **newppi = 12;
+    **newppi = 2;
 
     cout << i << endl;
     cout << *pi << endl;
     cout << **ppi << endl;
 
-    **ppi = 10;
+    **ppi = 3;
     cout << i << endl;
     cout << *pi << endl;
     cout << **ppi << endl;
 
-    *pi = 9;
+    *pi = 4;
     cout << i << endl;
     cout << *pi << endl;
     cout << **ppi << endl;
 
-    i = 8;
+    i = 5;
 
     cout << i << endl;
     cout << *pi << endl;
