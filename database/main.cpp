@@ -19,15 +19,19 @@ void insertData3();
 
 void queryData();
 
+void deleteTable();
+
 int main() {
 
 //    createTable();
 //    queryData();
+    deleteTable();
     auto start = chrono::system_clock::now();
     insertData3();
     auto end = chrono::system_clock::now();
     chrono::duration<double> use = end - start;
     cout << use.count() << endl;
+    queryData();
     return 0;
 };
 
@@ -38,6 +42,14 @@ void createTable() {
 
     sqlite3_exec(pDb, "create table mytable (id integer primary key autoincrement, name text, age integer, addr text)",
                  nullptr, nullptr, nullptr);
+}
+
+void deleteTable() {
+
+    sqlite3 *pDb = nullptr;
+    sqlite3_open("test.db", &pDb);
+
+    sqlite3_exec(pDb, "delete from mytable", nullptr, nullptr, nullptr);
 }
 
 void insertData1() {
@@ -133,6 +145,7 @@ void queryData() {
         for (int j = 0; j < c; j++) {
             cout << table[i * c + j] << endl;
         }
+        cout << "===============" << endl;
     }
 
     // 必须释放查询表
