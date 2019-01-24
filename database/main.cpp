@@ -57,7 +57,7 @@ void insertData1() {
     sqlite3 *pDb = nullptr;
     sqlite3_open("test1.db", &pDb);
 
-    for (int i = 0; i < 1000; ++i) {
+    for (int i = 0; i < 10000; ++i) {
 
         string name = "lilei" + to_string(i);
         int age = i;
@@ -69,7 +69,7 @@ void insertData1() {
         string addr5 = "addr" + to_string(i);
         string addr6 = "addr" + to_string(i);
 
-        char buff[100];
+        char buff[500];
         sprintf(buff,
                 "insert into mytable (name, age, addr, addr1, addr2, addr3, addr4, addr5, addr6) values ('%s',%d,'%s','%s','%s','%s','%s','%s','%s')",
                 name.c_str(), age, addr.c_str(), addr1.c_str(), addr2.c_str(), addr3.c_str(), addr4.c_str(), addr5.c_str(), addr6.c_str());
@@ -85,7 +85,7 @@ void insertData2() {
     sqlite3_open("test1.db", &pDb);
     sqlite3_exec(pDb, "PRAGMA synchronous = OFF; ", 0, 0, 0);
 
-    for (int i = 0; i < 1000; ++i) {
+    for (int i = 0; i < 10000; ++i) {
 
         string name = "lilei" + to_string(i);
         int age = i;
@@ -97,7 +97,7 @@ void insertData2() {
         string addr5 = "addr" + to_string(i);
         string addr6 = "addr" + to_string(i);
 
-        char buff[100];
+        char buff[500];
         sprintf(buff,
                 "insert into mytable (name, age, addr, addr1, addr2, addr3, addr4, addr5, addr6) values ('%s',%d,'%s','%s','%s','%s','%s','%s','%s')",
                 name.c_str(), age, addr.c_str(), addr1.c_str(), addr2.c_str(), addr3.c_str(), addr4.c_str(), addr5.c_str(), addr6.c_str());
@@ -127,7 +127,7 @@ void insertData3() {
     sqlite3_stmt *stmt;
     sqlite3_prepare_v2(pDb, sql, -1, &stmt, nullptr);
 
-    for (int i = 0; i < 1000; ++i) {
+    for (int i = 0; i < 10000; ++i) {
         string name = "lilei" + to_string(i);
         int age = i;
         string addr = "addr" + to_string(i);
