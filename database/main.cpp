@@ -119,6 +119,7 @@ void insertData3() {
         sqlite3_bind_text(stmt, 1, name.c_str(), -1, SQLITE_TRANSIENT);
         sqlite3_bind_int(stmt, 2, age);
         sqlite3_bind_text(stmt, 3, addr.c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_step(stmt);
     }
     sqlite3_finalize(stmt);
 
