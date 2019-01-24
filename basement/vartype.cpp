@@ -98,41 +98,41 @@ void testPointer(int *pi) {
     *pi = 10;
 }
 
-int main() {
-
-    // 原始字符串
-    string s = "HTTP/1.1 200 OK\n"
-               "Content-Type: image/jpeg\n"
-               "Last-Modified: Tue, 15 Jan 2019 05:59:46 GMT\n"
-               "Accept-Ranges: bytes\n"
-               "ETag: \"8d28c48497acd41:0\"\n"
-               "Server: Microsoft-IIS/7.5\n"
-               "Date: Tue, 15 Jan 2019 07:38:33 GMT\n"
-               "Content-Length: 872234";
-
-    // 获取长度
-    size_t len = strlen(s.c_str());
-    cout << "len:" << len << endl;
-    // 寻找eTag头部
-    unsigned long a  = s.find("ETag: ");
-    cout << a << endl;
-    // 截取etag以后字符串
-    string s1 = s.substr(a+6,len);
-    cout << "after slice:" << s1 << endl;
-
-    size_t len1 = strlen(s1.c_str());
-    cout << "len1:" << len1 << endl;
-
-    string s2 = s1.substr(1,len1);
-    cout << "after slice:" << s2 << endl;
-
-    unsigned long b = s2.find("\"");
-    cout << "b:" << b <<endl;
-
-    string wanted = s2.substr(0,b);
-    cout << wanted <<endl;
-
-
-
-    return 0;
-}
+//int main() {
+//
+//    // 原始字符串
+//    string s = "HTTP/1.1 200 OK\n"
+//               "Content-Type: image/jpeg\n"
+//               "Last-Modified: Tue, 15 Jan 2019 05:59:46 GMT\n"
+//               "Accept-Ranges: bytes\n"
+//               "ETag: \"8d28c48497acd41:0\"\n"
+//               "Server: Microsoft-IIS/7.5\n"
+//               "Date: Tue, 15 Jan 2019 07:38:33 GMT\n"
+//               "Content-Length: 872234";
+//
+//    // 获取长度
+//    size_t len = strlen(s.c_str());
+//    cout << "len:" << len << endl;
+//    // 寻找eTag头部
+//    unsigned long a  = s.find("ETag: ");
+//    cout << a << endl;
+//    // 截取etag以后字符串
+//    string s1 = s.substr(a+6,len);
+//    cout << "after slice:" << s1 << endl;
+//
+//    size_t len1 = strlen(s1.c_str());
+//    cout << "len1:" << len1 << endl;
+//
+//    string s2 = s1.substr(1,len1);
+//    cout << "after slice:" << s2 << endl;
+//
+//    unsigned long b = s2.find("\"");
+//    cout << "b:" << b <<endl;
+//
+//    string wanted = s2.substr(0,b);
+//    cout << wanted <<endl;
+//
+//
+//
+//    return 0;
+//}
