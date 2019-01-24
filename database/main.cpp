@@ -38,32 +38,41 @@ int main() {
 void createTable() {
 
     sqlite3 *pDb = nullptr;
-    sqlite3_open("test.db", &pDb);
+    sqlite3_open("test1.db", &pDb);
 
-    sqlite3_exec(pDb, "create table mytable (id integer primary key autoincrement, name text, age integer, addr text)",
+    sqlite3_exec(pDb,
+                 "create table mytable (id integer primary key autoincrement, name text, age integer, addr text, addr1 text, addr2 text, addr3 text, addr4 text, addr5 text, addr6 text)",
                  nullptr, nullptr, nullptr);
 }
 
 void deleteTable() {
 
     sqlite3 *pDb = nullptr;
-    sqlite3_open("test.db", &pDb);
+    sqlite3_open("test1.db", &pDb);
 
     sqlite3_exec(pDb, "delete from mytable", nullptr, nullptr, nullptr);
 }
 
 void insertData1() {
     sqlite3 *pDb = nullptr;
-    sqlite3_open("test.db", &pDb);
+    sqlite3_open("test1.db", &pDb);
 
     for (int i = 0; i < 1000; ++i) {
 
         string name = "lilei" + to_string(i);
         int age = i;
         string addr = "addr" + to_string(i);
+        string addr1 = "addr" + to_string(i);
+        string addr2 = "addr" + to_string(i);
+        string addr3 = "addr" + to_string(i);
+        string addr4 = "addr" + to_string(i);
+        string addr5 = "addr" + to_string(i);
+        string addr6 = "addr" + to_string(i);
 
         char buff[100];
-        sprintf(buff, "insert into mytable (name, age, addr) values ('%s',%d,'%s')", name.c_str(), age, addr.c_str());
+        sprintf(buff,
+                "insert into mytable (name, age, addr, addr1, addr2, addr3, addr4, addr5, addr6) values ('%s',%d,'%s','%s','%s','%s','%s','%s','%s')",
+                name.c_str(), age, addr.c_str(), addr1.c_str(), addr2.c_str(), addr3.c_str(), addr4.c_str(), addr5.c_str(), addr6.c_str());
         sqlite3_exec(pDb, buff, nullptr, nullptr, nullptr);
     }
 
@@ -73,7 +82,7 @@ void insertData1() {
 
 void insertData2() {
     sqlite3 *pDb = nullptr;
-    sqlite3_open("test.db", &pDb);
+    sqlite3_open("test1.db", &pDb);
     sqlite3_exec(pDb, "PRAGMA synchronous = OFF; ", 0, 0, 0);
 
     for (int i = 0; i < 1000; ++i) {
@@ -81,9 +90,17 @@ void insertData2() {
         string name = "lilei" + to_string(i);
         int age = i;
         string addr = "addr" + to_string(i);
+        string addr1 = "addr" + to_string(i);
+        string addr2 = "addr" + to_string(i);
+        string addr3 = "addr" + to_string(i);
+        string addr4 = "addr" + to_string(i);
+        string addr5 = "addr" + to_string(i);
+        string addr6 = "addr" + to_string(i);
 
         char buff[100];
-        sprintf(buff, "insert into mytable (name, age, addr) values ('%s',%d,'%s')", name.c_str(), age, addr.c_str());
+        sprintf(buff,
+                "insert into mytable (name, age, addr, addr1, addr2, addr3, addr4, addr5, addr6) values ('%s',%d,'%s','%s','%s','%s','%s','%s','%s')",
+                name.c_str(), age, addr.c_str(), addr1.c_str(), addr2.c_str(), addr3.c_str(), addr4.c_str(), addr5.c_str(), addr6.c_str());
         sqlite3_exec(pDb, buff, nullptr, nullptr, nullptr);
     }
 
@@ -103,8 +120,8 @@ void insertData3() {
 //    sqlite3_finalize(stmt);
 
     sqlite3 *pDb = nullptr;
-    sqlite3_open("test.db", &pDb);
-    const char *sql = "insert into mytable (name, age, addr) values (?,?,?);";
+    sqlite3_open("test1.db", &pDb);
+    const char *sql = "insert into mytable (name, age, addr, addr1, addr2, addr3, addr4, addr5, addr6) values (?,?,?,?,?,?,?,?,?);";
 
     sqlite3_exec(pDb, "begin;", nullptr, nullptr, nullptr);
     sqlite3_stmt *stmt;
@@ -119,6 +136,12 @@ void insertData3() {
         sqlite3_bind_text(stmt, 1, name.c_str(), -1, SQLITE_TRANSIENT);
         sqlite3_bind_int(stmt, 2, age);
         sqlite3_bind_text(stmt, 3, addr.c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_bind_text(stmt, 4, addr.c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_bind_text(stmt, 5, addr.c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_bind_text(stmt, 6, addr.c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_bind_text(stmt, 7, addr.c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_bind_text(stmt, 8, addr.c_str(), -1, SQLITE_TRANSIENT);
+        sqlite3_bind_text(stmt, 9, addr.c_str(), -1, SQLITE_TRANSIENT);
         sqlite3_step(stmt);
     }
     sqlite3_finalize(stmt);
@@ -129,7 +152,7 @@ void insertData3() {
 void queryData() {
 
     sqlite3 *pDb = nullptr;
-    sqlite3_open("test.db", &pDb);
+    sqlite3_open("test1.db", &pDb);
 
     char **table; // 查询结果
     int r, c;     // 行数、列数
