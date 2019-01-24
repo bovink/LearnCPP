@@ -5,10 +5,12 @@
 #include "sqlite3.h"
 #include <string>
 #include <iostream>
+#include <chrono>
 
 using namespace std;
 
 void createTable();
+
 void insertData();
 
 void queryData();
@@ -16,8 +18,12 @@ void queryData();
 int main() {
 
 //    createTable();
-//    insertData();
 //    queryData();
+    auto start = chrono::system_clock::now();
+    insertData();
+    auto end = chrono::system_clock::now();
+    chrono::duration<double> use = end - start;
+    cout << use.count() << endl;
     return 0;
 };
 
@@ -34,7 +40,7 @@ void insertData() {
     sqlite3 *pDb = nullptr;
     sqlite3_open("test.db", &pDb);
 
-    for (int i = 0; i < 10; ++i) {
+    for (int i = 0; i < 1000; ++i) {
 
         string name = "lilei" + to_string(i);
         int age = i;
@@ -67,7 +73,7 @@ void queryData() {
     // ......
     for (int i = 0; i <= r; i++) {
         for (int j = 0; j < c; j++) {
-        cout << table[i * c + j] << endl;
+            cout << table[i * c + j] << endl;
         }
     }
 
