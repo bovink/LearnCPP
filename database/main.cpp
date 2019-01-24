@@ -11,7 +11,8 @@ using namespace std;
 
 void createTable();
 
-void insertData();
+void insertData1();
+void insertData2();
 
 void queryData();
 
@@ -20,7 +21,7 @@ int main() {
 //    createTable();
 //    queryData();
     auto start = chrono::system_clock::now();
-    insertData();
+    insertData1();
     auto end = chrono::system_clock::now();
     chrono::duration<double> use = end - start;
     cout << use.count() << endl;
@@ -36,9 +37,29 @@ void createTable() {
                  nullptr, nullptr, nullptr);
 }
 
-void insertData() {
+void insertData1() {
     sqlite3 *pDb = nullptr;
     sqlite3_open("test.db", &pDb);
+
+    for (int i = 0; i < 1000; ++i) {
+
+        string name = "lilei" + to_string(i);
+        int age = i;
+        string addr = "addr" + to_string(i);
+
+        char buff[100];
+        sprintf(buff, "insert into mytable (name, age, addr) values ('%s',%d,'%s')", name.c_str(), age, addr.c_str());
+        sqlite3_exec(pDb, buff, nullptr, nullptr, nullptr);
+    }
+
+    sqlite3_close(pDb);
+
+}
+
+void insertData2() {
+    sqlite3 *pDb = nullptr;
+    sqlite3_open("test.db", &pDb);
+    sqlite3_exec(pDb, "PRAGMA synchronous = OFF; ", 0, 0, 0);
 
     for (int i = 0; i < 1000; ++i) {
 
