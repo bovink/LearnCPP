@@ -23,6 +23,8 @@ public:
 
     void intToString();
 
+    void generateString();
+
 };
 
 

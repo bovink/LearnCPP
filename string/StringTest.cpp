@@ -2,14 +2,13 @@
 // Created by 吴宗刚 on 2019/1/25.
 //
 
+#include <vector>
 #include "StringTest.h"
 
 int main() {
 
     auto test = new StringTest();
-    test->print("a");
-    test->getLength();
-    test->stringToInt();
+    test->generateString();
 }
 
 
@@ -37,4 +36,20 @@ void StringTest::intToString() {
     int i = 10;
     string s = to_string(i);
     cout << s << endl;
+}
+
+void StringTest::generateString() {
+
+    vector<char> content;
+    content.push_back('h');
+    content.push_back('e');
+    content.push_back('l');
+    content.push_back('l');
+    content.push_back('o');
+    string s1(content.begin(), content.end());
+    print(s1);
+
+    char chars[] = "world";
+    string s2 = chars;
+    print(s2);
 }
