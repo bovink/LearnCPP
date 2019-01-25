@@ -19,19 +19,22 @@ void insertData3();
 
 void queryData();
 
+void queryData2();
+
 void deleteTable();
 
 int main() {
 
 //    createTable();
 //    queryData();
-    deleteTable();
+//    deleteTable();
     auto start = chrono::system_clock::now();
-    insertData3();
+//    insertData3();
+    queryData2();
     auto end = chrono::system_clock::now();
     chrono::duration<double> use = end - start;
     cout << use.count() << endl;
-    queryData();
+//    queryData();
     return 0;
 };
 
@@ -72,7 +75,8 @@ void insertData1() {
         char buff[500];
         sprintf(buff,
                 "insert into mytable (name, age, addr, addr1, addr2, addr3, addr4, addr5, addr6) values ('%s',%d,'%s','%s','%s','%s','%s','%s','%s')",
-                name.c_str(), age, addr.c_str(), addr1.c_str(), addr2.c_str(), addr3.c_str(), addr4.c_str(), addr5.c_str(), addr6.c_str());
+                name.c_str(), age, addr.c_str(), addr1.c_str(), addr2.c_str(), addr3.c_str(), addr4.c_str(),
+                addr5.c_str(), addr6.c_str());
         sqlite3_exec(pDb, buff, nullptr, nullptr, nullptr);
     }
 
@@ -100,7 +104,8 @@ void insertData2() {
         char buff[500];
         sprintf(buff,
                 "insert into mytable (name, age, addr, addr1, addr2, addr3, addr4, addr5, addr6) values ('%s',%d,'%s','%s','%s','%s','%s','%s','%s')",
-                name.c_str(), age, addr.c_str(), addr1.c_str(), addr2.c_str(), addr3.c_str(), addr4.c_str(), addr5.c_str(), addr6.c_str());
+                name.c_str(), age, addr.c_str(), addr1.c_str(), addr2.c_str(), addr3.c_str(), addr4.c_str(),
+                addr5.c_str(), addr6.c_str());
         sqlite3_exec(pDb, buff, nullptr, nullptr, nullptr);
     }
 
@@ -109,15 +114,6 @@ void insertData2() {
 }
 
 void insertData3() {
-// 插入（替换）
-//    const char *sql_insert = "INSERT INTO t_data (number, name) VALUES (?, ?);";
-//    const char *sql_update = "REPLACE INTO t_data (number, name) VALUES ( ?, ?);";
-//    sqlite3_stmt *stmt;
-//    sqlite3_prepare_v2(_db, sql_update, -1, &stmt, NULL);
-//    sqlite3_bind_text(stmt, 1, "1007", -1, SQLITE_TRANSIENT);
-//    sqlite3_bind_text(stmt, 2, "Dolhin", -1, SQLITE_TRANSIENT);
-//    sqlite3_step(stmt);
-//    sqlite3_finalize(stmt);
 
     sqlite3 *pDb = nullptr;
     sqlite3_open("test1.db", &pDb);
@@ -175,5 +171,28 @@ void queryData() {
     // 必须释放查询表
     sqlite3_free_table(table);
 
+}
+
+void queryData2() {
+    sqlite3 *pDb = nullptr;
+    sqlite3_open("test1.db", &pDb);
+
+    const char *sql = "select * from mytable";
+
+    sqlite3_exec(pDb, "begin;", nullptr, nullptr, nullptr);
+    sqlite3_stmt *stmt;
+    sqlite3_prepare_v2(pDb, sql, -1, &stmt, nullptr);
+    while (sqlite3_step(stmt) == SQLITE_ROW) {
+
+
+        int count = sqlite3_column_count(stmt);
+
+        for (int i = 0; i < count; ++i) {
+            const unsigned char *text = sqlite3_column_text(stmt, i);
+            cout << text << endl;
+        }
+    }
+    sqlite3_finalize(stmt);
+    sqlite3_exec(pDb, "commit;", nullptr, nullptr, nullptr);
 }
 
