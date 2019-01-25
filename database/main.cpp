@@ -23,20 +23,20 @@ void queryData2();
 
 void deleteTable();
 
-int main() {
-
-//    createTable();
-//    queryData();
-//    deleteTable();
-    auto start = chrono::system_clock::now();
-//    insertData3();
-    queryData2();
-    auto end = chrono::system_clock::now();
-    chrono::duration<double> use = end - start;
-    cout << use.count() << endl;
-//    queryData();
-    return 0;
-};
+//int main() {
+//
+////    createTable();
+////    queryData();
+////    deleteTable();
+//    auto start = chrono::system_clock::now();
+////    insertData3();
+//    queryData2();
+//    auto end = chrono::system_clock::now();
+//    chrono::duration<double> use = end - start;
+//    cout << use.count() << endl;
+////    queryData();
+//    return 0;
+//};
 
 void createTable() {
 
