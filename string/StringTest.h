@@ -5,8 +5,23 @@
 #ifndef LEARNCPP_STRINGTEST_H
 #define LEARNCPP_STRINGTEST_H
 
+#include <string>
+#include <iostream>
+using namespace std;
 
 class StringTest {
+
+
+
+public:
+
+    void print(string s);
+
+    void getLength();
+
+    void stringToInt();
+
+    void intToString();
 
 };
 
