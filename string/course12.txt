@@ -2,7 +2,7 @@
   {
     "unitType": 0,
     "unitData": {
-      "wordImage": "ps_danci10_k2.png",
+      "wordImage": "ps_danci10_k3.png",
       "wordImageMask": "ps_danci10_k1.png",
       "wordText": "mouse",
       "wordTextImg": "ps_danci_z60.png",
