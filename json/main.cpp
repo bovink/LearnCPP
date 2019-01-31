@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <fstream>
 #include "json.hpp"
 #include "Date.h"
 #include "Model.h"
@@ -26,6 +27,7 @@ void testDate() {
     date::Date d = *static_cast<date::Date *>(model.getModel());
     cout << d.getToday() << endl;
 }
+
 void testPerson() {
 
     json jperson;
@@ -42,7 +44,24 @@ void testPerson() {
     cout << p.getAge() << endl;
 }
 
+string readFile() {
+    string content;
+    string readBuffer;
+    ifstream infile;
+    infile.open("/Users/bovink/Development/MyProject/CLionProject/LearnCPP/string/course11.txt");
+    if (!infile) {
+        cout << "open failed" <<endl;
+    }
+    while (infile >> readBuffer) {
+        content += readBuffer;
+    }
+    return content;
+
+}
+
 int main() {
 
+    string x = readFile();
+    cout << x << endl;
     return 0;
 }
