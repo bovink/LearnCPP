@@ -1,0 +1,29 @@
+[
+  {
+    "unitType": 1,
+    "unitData": {
+      "wordImage": "ps_danci10_k2.png",
+      "wordImageMask": "ps_danci10_k1.png",
+      "wordText": "mouse",
+      "wordTextImg": "ps_danci_z60.png",
+      "wordAudio": "mouse.mp3"
+    }
+  },
+  {
+    "unitType": 2,
+    "unitData": {
+      "sentenceText": "I wish I had a monster.",
+      "sentenceVideoUrl": "01.mp4",
+      "sentenceAudioUrl": "",
+      "sentEvalFile": "course10_1.gram"
+    }
+  },
+  {
+    "unitType": 3,
+    "unitData": {
+      "wordText": "ps_tingli10_1.png",
+      "wordCard": "ps_tingli10_kapian1.png",
+      "wordAudioUrl": "mouse.mp3"
+    }
+  }
+]
