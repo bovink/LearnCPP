@@ -5,11 +5,11 @@
 #include <vector>
 #include "StringTest.h"
 
-int main() {
-
-    auto test = new StringTest();
-    test->generateString();
-}
+//int main() {
+//
+//    auto test = new StringTest();
+//    test->generateString();
+//}
 
 
 void StringTest::print(string s) {

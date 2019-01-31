@@ -42,9 +42,7 @@ void testPerson() {
     cout << p.getAge() << endl;
 }
 
-//int main() {
+int main() {
 
-//    testDate();
-////    testPerson();
-//    return 0;
-//}
+    return 0;
+}
