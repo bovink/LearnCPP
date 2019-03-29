@@ -25,6 +25,8 @@ public:
 
     void generateString();
 
+    void toLowerCase();
+
 };
 
 

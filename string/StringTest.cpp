@@ -5,11 +5,12 @@
 #include <vector>
 #include "StringTest.h"
 
-//int main() {
-//
-//    auto test = new StringTest();
-//    test->generateString();
-//}
+int main() {
+
+    auto test = new StringTest();
+    test->toLowerCase();
+
+}
 
 
 void StringTest::print(string s) {
@@ -52,4 +53,12 @@ void StringTest::generateString() {
     char chars[] = "world";
     string s2 = chars;
     print(s2);
+}
+
+void StringTest::toLowerCase() {
+
+    string s = "BIG";
+    std::transform(s.begin(), s.end(), s.begin(), ::tolower);
+    cout << s << endl;
+
 }
