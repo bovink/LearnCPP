@@ -5,12 +5,12 @@
 #include <vector>
 #include "StringTest.h"
 
-int main() {
-
-    auto test = new StringTest();
-    test->toLowerCase();
-
-}
+//int main() {
+//
+//    auto test = new StringTest();
+//    test->toLowerCase();
+//
+//}
 
 
 void StringTest::print(string s) {
