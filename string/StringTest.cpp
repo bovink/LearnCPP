@@ -4,13 +4,15 @@
 
 #include <vector>
 #include "StringTest.h"
+#include "Func.h"
 
-//int main() {
-//
-//    auto test = new StringTest();
-//    test->toLowerCase();
-//
-//}
+int main() {
+
+    auto test = new StringTest();
+    test->toLowerCase();
+    testFunc();
+
+}
 
 
 void StringTest::print(string s) {

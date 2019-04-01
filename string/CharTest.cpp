@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include "Func.h"
 
 using namespace std;
 
@@ -18,16 +19,17 @@ void print(char c) {
     cout << c << endl;
 }
 
-int main() {
-    print(*ptr1);
-    print(*ptr2);
-
-    ptr1 = &b;
-
-    *ptr2 = b;
-    print(*ptr1);
-    print(*ptr2);
-
-    return 0;
-}
+//int main() {
+//    print(*ptr1);
+//    print(*ptr2);
+//
+//    ptr1 = &b;
+//
+//    *ptr2 = b;
+//    print(*ptr1);
+//    print(*ptr2);
+//
+//    testFunc();
+//    return 0;
+//}
 
