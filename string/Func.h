@@ -5,8 +5,17 @@
 #ifndef LEARNCPP_FUNC_H
 #define LEARNCPP_FUNC_H
 
+#include <iostream>
+
+using namespace std;
 
 void testFunc();
+
+static void testStaticFunc();
+
+void testStaticFunc() {
+    cout << "test static func" << endl;
+}
 
 
 #endif //LEARNCPP_FUNC_H

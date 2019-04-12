@@ -3,9 +3,6 @@
 //
 
 #include "Func.h"
-#include <iostream>
-
-using namespace std;
 
 void testFunc() {
     cout << "testFunc" << endl;

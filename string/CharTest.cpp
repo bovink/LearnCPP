@@ -26,14 +26,15 @@ int main() {
     print(*ptr2);
 
     *ptr2 = b;
-    ptr2 = &b;
+//    ptr2 = &b;
 
     ptr1 = &b;
-    *ptr1 = b;
+//    *ptr1 = b;
     print(*ptr1);
     print(*ptr2);
 
     testFunc();
+    testStaticFunc();
     return 0;
 }
 
