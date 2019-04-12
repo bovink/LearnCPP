@@ -6,13 +6,13 @@
 #include "StringTest.h"
 #include "Func.h"
 
-int main() {
-
-    auto test = new StringTest();
-    test->toLowerCase();
-    testFunc();
-
-}
+//int main() {
+//
+//    auto test = new StringTest();
+//    test->toLowerCase();
+//    testFunc();
+//
+//}
 
 
 void StringTest::print(string s) {
