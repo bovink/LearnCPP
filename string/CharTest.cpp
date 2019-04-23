@@ -21,20 +21,20 @@ void print(char c) {
     cout << c << endl;
 }
 
-int main() {
-    print(*ptr1);
-    print(*ptr2);
-
-    *ptr2 = b;
-//    ptr2 = &b;
-
-    ptr1 = &b;
-//    *ptr1 = b;
-    print(*ptr1);
-    print(*ptr2);
-
-    testFunc();
-    testStaticFunc();
-    return 0;
-}
+//int main() {
+//    print(*ptr1);
+//    print(*ptr2);
+//
+//    *ptr2 = b;
+////    ptr2 = &b;
+//
+//    ptr1 = &b;
+////    *ptr1 = b;
+//    print(*ptr1);
+//    print(*ptr2);
+//
+//    testFunc();
+//    testStaticFunc();
+//    return 0;
+//}
 
