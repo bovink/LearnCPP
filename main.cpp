@@ -8,6 +8,9 @@ int main() {
     doc.LoadFile("/Users/bovink/Development/MyProject/CLionProject/LearnCPP/helloworld.xml");
 
     const char *content = doc.FirstChildElement("Hello")->GetText();
+    const char *id = doc.FirstChildElement("Hello")->Attribute("id");
+
+    printf("id,%s\n", id);
     printf("Hello,%s", content);
     return 0;
 }
