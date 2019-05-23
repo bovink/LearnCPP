@@ -1,14 +1,19 @@
 <?xml version="1.0"?>
 
 <RelativeLayout>
-
-    <ImageView src="1.png" order="1"/>
-    <ImageView src="1.png" order="1"/>
-    <FrameLayout>
-        <ImageView/>
-        <Sprite/>
-        <Sprite/>
-    </FrameLayout>
+    <Music src="p1_2bg.mp3"/>
+    <Music src="p1hj.mp3"/>
+    <ImageView src="hb_ctbb_bj1.png" zorder="1"/>
+    <Sprite posx="100"
+            posy="200"
+            resource="hb_ctbb_p1_1.plist"
+            audio="hb_ctbb_p1_1.plist"
+            audioDelay="hb_ctbb_p1_1.plist"
+            frameName="hb_ctbb_p1_1.plist"
+            delay="hb_ctbb_p1_1.plist"
+            frameTime="hb_ctbb_p1_1.plist"
+            frameNum="hb_ctbb_p1_1.plist"
+            type=""/>
 
 
 </RelativeLayout>

@@ -23,10 +23,8 @@ int main() {
     XMLDocument doc;
     doc.LoadFile("/Users/bovink/Development/MyProject/CLionProject/LearnCPP/helloworld.xml");
 
-    XMLElement *element = doc.FirstChildElement();
-    if (!element->NoChildren()) {
-
-        printAllChildValue(element);
-    }
+    XMLElement *element = doc.FirstChildElement()->FirstChildElement("Sprite");
+    const char *posx = element->Attribute("posx");
+    printf("%s\n", posx);
     return 0;
 }
