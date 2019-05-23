@@ -1,19 +1,392 @@
 <?xml version="1.0"?>
 
-<RelativeLayout>
-    <Music src="p1_2bg.mp3"/>
-    <Music src="p1hj.mp3"/>
-    <ImageView src="hb_ctbb_bj1.png" zorder="1"/>
-    <Sprite posx="100"
-            posy="200"
-            resource="hb_ctbb_p1_1.plist"
-            audio="hb_ctbb_p1_1.plist"
-            audioDelay="hb_ctbb_p1_1.plist"
-            frameName="hb_ctbb_p1_1.plist"
-            delay="hb_ctbb_p1_1.plist"
-            frameTime="hb_ctbb_p1_1.plist"
-            frameNum="hb_ctbb_p1_1.plist"
-            type=""/>
+<Page>
+    <RelativeLayout>
+        <Music src="p1_2bg.mp3"/>
+        <Music src="p1hj.mp3"/>
+        <ImageView src="hb_ctbb_bj1.png" zorder="1"/>
+        <Sprite posx="329"
+                posy="293"
+                resource="hb_ctbb_p1_1.plist"
+                frameName="hb_ctbb_p1_01.png"
+                delay="3"
+                frameNum="32"
+                type="ActionRunForever"/>
+        <Sprite resource="hb_ctbb_p1_2.plist"
+                posx="863"
+                posy="146"
+                type="ActionRunOneTime"
+                audio="click1.mp3"
+                frameName="hb_ctbb_p1_c01.png"
+                frameNum="16"/>
 
 
-</RelativeLayout>
+    </RelativeLayout>
+    <!--  2-->
+    <RelativeLayout>
+        <Music src="p1_2bg.mp3"/>
+        <Music src="p2hj.mp3"/>
+        <ImageView src="hb_ctbb_bj2.png" zorder="1"/>
+        <Sprite resource="hb_ctbb_p2_1.plist"
+                posx="925"
+                posy="625"
+                type="ActionRunForever"
+                frameName="hb_ctbb_p2_c01.png"
+                frameNum="17"/>
+
+
+    </RelativeLayout>
+    <!--    3-->
+    <RelativeLayout>
+        <Music src="p3_4bg.mp3"/>
+        <Music src="p3hj.mp3"/>
+        <ImageView src="hb_ctbb_bj3.png" zorder="1"/>
+        <ImageView src="hb_ctbb_bj5.png" zorder="3"/>
+        <Sprite resource="hb_ctbb_p3_1.plist"
+                posx="1010"
+                posy="894"
+                type="ActionRunForever"
+                frameName="hb_ctbb_p3_er01.png"
+                frameNum="32"/>
+        <Sprite resource="hb_ctbb_p3_2.plist"
+                posx="407"
+                posy="944"
+                type="ActionRunForever"
+                frameName="hb_ctbb_p3_n01.png"
+                frameNum="32"/>
+        <Sprite resource="hb_ctbb_p3_3.plist"
+                posx="611"
+                posy="287"
+                type="ActionRunOneTime"
+                audio="click1.mp3"
+                audioDelay="1.2"
+                frameName="hb_ctbb_p3_r01.png"
+                frameNum="32"/>
+        <Treasure
+                posx="384"
+                posy="831"
+                audio="treasure1.mp3"
+                audioEffect="treasure_find1.mp3"
+                name="ctbb_treasure1"
+                treasureIntro="hb_ctbb_zdk2.png"
+                resource="hb_ctbb_bj4.png"/>
+
+
+    </RelativeLayout>
+
+    <!--    4-->
+    <RelativeLayout>
+        <Music src="p3_4bg.mp3"/>
+        <Music src="p4hj.mp3"/>
+        <ImageView src="hb_ctbb_bj6.png" zorder="1"/>
+        <ImageView src="hb_ctbb_bj7.png" zorder="3"/>
+        <Sprite resource="hb_ctbb_p4_1.plist"
+                posx="1428"
+                posy="510"
+                type="ActionRunOneTime"
+                audio="click1.mp3"
+                audioDelay="0.3"
+                frameName="hb_ctbb_p4_01.png"
+                frameNum="24"/>
+        <Sprite resource="hb_ctbb_p4_2.plist"
+                posx="1232"
+                posy="633"
+                type="ActionRunForever"
+                frameName="hb_ctbb_p4_ez01.png"
+                delay="3"
+                frameNum="24"/>
+
+
+    </RelativeLayout>
+    <!--    5-->
+    <RelativeLayout>
+        <Music src="p5bg.mp3"/>
+        <Music src="p5hj.mp3"/>
+        <ImageView src="hb_ctbb_bj8.png" zorder="1"/>
+        <ImageView src="hb_ctbb_bj9.png" zorder="3"/>
+        <Sprite resource="hb_ctbb_p5_2_0.plist|hb_ctbb_p5_2_1.plist|hb_ctbb_p5_2_2.plist"
+                posx="292"
+                posy="0"
+                type="ActionRunOneTime"
+                audio="click1.mp3"
+                audioDelay="0.5"
+                frameName="hb_ctbb_p5_t01.png"
+                frameNum="28"/>
+
+
+    </RelativeLayout>
+    <!--    6-->
+    <RelativeLayout>
+        <Music src="p6bg.mp3"/>
+        <Music src="p6hj.mp3"/>
+        <ImageView src="hb_ctbb_bj10.png" zorder="1"/>
+        <Sprite resource="hb_ctbb_p6_2_0.plist|hb_ctbb_p6_2_1.plist|hb_ctbb_p6_2_2.plist"
+                posx="535"
+                posy="0"
+                type="ActionRunAfterClickWait"
+                audio="click1.mp3"
+                audioDelay="2"
+                frameName="hb_ctbb_p6_b01.png"
+                frameNum="25"/>
+        <Sprite resource="hb_ctbb_p6_c_0.plist|hb_ctbb_p6_c_1.plist"
+                posx="582"
+                posy="55"
+                type="ActionRunForever"
+                frameName="hb_ctbb_p6_c01.png"
+                frameNum="17"/>
+        <Treasure
+                posx="1540"
+                posy="1037"
+                audio="treasure1.mp3"
+                audioEffect="treasure_find2.mp3"
+                name="ctbb_treasure2"
+                treasureIntro="hb_ctbb_zdk5.png"
+                resource="hb_ctbb_bj11.png"/>
+
+
+    </RelativeLayout>
+    <!--    7-->
+    <RelativeLayout>
+        <Music src="p7bg.mp3"/>
+        <Music src="p7hj.mp3"/>
+        <ImageView src="hb_ctbb_bj12.png" zorder="1"/>
+        <Sprite resource="hhb_ctbb_p7_1.plist"
+                posx="618"
+                posy="862"
+                type="ActionRunOneTime"
+                audio="click1.mp3"
+                audioDelay="0.5"
+                frameName="hb_ctbb_p7_a01.png"
+                frameNum="21"/>
+        <Sprite resource="hb_ctbb_p7_2_0.plist|hb_ctbb_p7_2_1.plist"
+                posx="995"
+                posy="0"
+                type="ActionRunForever"
+                frameName="hb_ctbb_p7_b01.png"
+                frameNum="31"/>
+
+
+    </RelativeLayout>
+    <!--    8-->
+    <RelativeLayout>
+        <Music src="p8bg.mp3"/>
+        <Music src="p8hj.mp3"/>
+        <ImageView src="hb_ctbb_bj13.png" zorder="1"/>
+        <ImageView src="hb_ctbb_bj15.png" zorder="3"/>
+        <Sprite resource="hb_ctbb_p8_1.plist"
+                posx="465"
+                posy="219"
+                type="ActionRunOneTime"
+                audio="click2.mp3"
+                audioDelay="0.2"
+                frameName="hb_ctbb_p8_a01.png"
+                frameNum="11"/>
+        <Sprite resource="hb_ctbb_p8_3_0.plist|hb_ctbb_p8_3_1.plist"
+                posx="766"
+                posy="791"
+                type="ActionRunForever"
+                frameName="hb_ctbb_p8_shui01.png"
+                frameNum="35"/>
+        <Sprite resource="hb_ctbb_p8_bd.plist"
+                posx="1170"
+                posy="612"
+                type="ActionRunAfterClickWait"
+                audio="click1.mp3"
+                frameName="hb_ctbb_p8_bd01.png"
+                frameNum="35"/>
+        <Sprite resource="hb_ctbb_p8_bdai.plist"
+                posx="1274"
+                posy="612"
+                type="ActionRunForever"
+                frameName="hb_ctbb_p8_bdai01.png"
+                frameNum="24"/>
+        <Treasure
+                posx="225"
+                posy="1012"
+                audio="treasure1.mp3"
+                audioEffect="treasure_find1.mp3"
+                name="ctbb_treasure3"
+                treasureIntro="hb_ctbb_zdk4.png"
+                resource="hb_ctbb_bj14.png"/>
+
+
+    </RelativeLayout>
+    <!--    9-->
+    <RelativeLayout>
+        <Music src="p9bg.mp3"/>
+        <Music src="p9hj.mp3"/>
+        <ImageView src="hb_ctbb_bj16.png" zorder="1"/>
+        <Sprite resource="hb_ctbb_p9_2.plist"
+                posx="899"
+                posy="62"
+                type="ActionRunAfterClickWait"
+                audio="click2.mp3"
+                frameName="hb_ctbb_p9_t01.png"
+                frameNum="25"/>
+        <Sprite resource="hb_ctbb_p9_t1dai.plist"
+                posx="1006"
+                posy="77"
+                type="ActionRunForever"
+                frameName="hb_ctbb_p9_t1dai01.png"
+                frameNum="24"/>
+        <Sprite resource="hb_ctbb_p9_3.plist"
+                posx="1570"
+                posy="101"
+                type="ActionRunAfterClickWait"
+                audio="click3.mp3"
+                frameName="hb_ctbb_p9_t201.png"
+                frameNum="25"/>
+        <Sprite resource="hb_ctbb_p9_t2dai.plist"
+                posx="1619"
+                posy="138"
+                type="ActionRunForever"
+                frameName="hb_ctbb_p9_t2dai01.png"
+                frameNum="24"/>
+        <Sprite resource="hb_ctbb_p9_1.plist"
+                posx="1318"
+                posy="453"
+                type="ActionRunOneTime"
+                audio="click1.mp3"
+                frameName="hb_ctbb_p9_b01.png"
+                frameNum="25"/>
+
+
+    </RelativeLayout>
+    <!--    10-->
+    <RelativeLayout>
+        <Music src="p10_11_12bg.mp3"/>
+        <Music src="p10hj.mp3"/>
+        <ImageView src="hb_ctbb_bj17.png" zorder="1"/>
+        <Sprite resource="hb_ctbb_p10_0.plist|hb_ctbb_p10_1.plist"
+                posx="1010"
+                posy="157"
+                type="ActionRunAfterClickWait"
+                audio="click1.mp3"
+                frameName="hb_ctbb_p10_01.png"
+                frameNum="21"/>
+        <Sprite resource="hb_ctbb_p10_pdai.plist"
+                posx="1017"
+                posy="158"
+                type="ActionRunForever"
+                frameName="hb_ctbb_p10_pdai01.png"
+                frameNum="22"/>
+        <Treasure
+                posx="444"
+                posy="894"
+                audio="treasure1.mp3"
+                audioEffect="treasure_find2.mp3"
+                name="ctbb_treasure4"
+                treasureIntro="hb_ctbb_zdk3.png"
+                resource="hb_ctbb_bj18.png"/>
+
+
+    </RelativeLayout>
+    <!--    11-->
+    <RelativeLayout>
+        <Music src="p10_11_12bg.mp3"/>
+        <Music src="p11hj.mp3"/>
+        <ImageView src="hb_ctbb_bj19.png" zorder="1"/>
+        <ImageView src="hb_ctbb_bj20.png" zorder="3"/>
+        <ImageView src="hb_ctbb_bj21.png" zorder="3"/>
+        <Sprite resource="hb_ctbb_p11_1.plist"
+                posx="830"
+                posy="179"
+                type="ActionRunAfterClickWait"
+                audio="click1.mp3"
+                frameName="hb_ctbb_p11_01.png"
+                frameNum="19"/>
+        <Sprite resource="hb_ctbb_p11_dai.plist"
+                posx="868"
+                posy="207"
+                type="ActionRunForever"
+                frameName="hb_ctbb_p11_dai01.png"
+                frameNum="19"/>
+
+
+    </RelativeLayout>
+    <!--    12-->
+    <RelativeLayout>
+        <Music src="p10_11_12bg.mp3"/>
+        <Music src="p12hj.mp3"/>
+        <ImageView src="hb_ctbb_bj22.png" zorder="1"/>
+        <Sprite resource="hb_ctbb_p12_dai.plist"
+                posx="147"
+                posy="523"
+                type="ActionRunAfterClickWait"
+                audio="click1.mp3"
+                frameName="hb_ctbb_p12_dai01.png"
+                frameNum="16"/>
+        <Sprite resource="hb_ctbb_p12_1.plist"
+                posx="165"
+                posy="523"
+                type="ActionRunForever"
+                frameName="hb_ctbb_p12_01.png"
+                frameNum="16"/>
+        <Treasure
+                posx="999"
+                posy="1063"
+                audio="treasure2.mp3"
+                audioEffect="treasure_find1.mp3"
+                name="ctbb_treasure5"
+                treasureIntro="hb_ctbb_zdk1.png"
+                resource="hb_ctbb_bj23.png"/>
+
+
+    </RelativeLayout>
+    <!--    13-->
+    <RelativeLayout>
+        <Music src="p13bg.mp3"/>
+        <Music src="p13hj.mp3"/>
+        <ImageView src="hb_ctbb_bj24.png" zorder="1"/>
+        <ImageView src="hb_ctbb_bj25.png" zorder="3"/>
+        <Sprite resource="hb_ctbb_p13_1.plist"
+                posx="512"
+                posy="129"
+                type="ActionRunAfterClickWait"
+                audio="click1.mp3"
+                audioDelay="0.2"
+                frameName="hb_ctbb_p13_01.png"
+                frameNum="20"/>
+        <Sprite resource="hb_ctbb_p13_dai_0.plist|hb_ctbb_p13_dai_1.plist"
+                posx="511"
+                posy="117"
+                type="ActionRunForever"
+                frameName="hb_ctbb_p13_dai01.png"
+                frameNum="15"/>
+
+        <Sprite resource="hb_ctbb_p13_2.plist"
+                posx="245"
+                posy="460"
+                type="ActionRunForever"
+                frameName="hb_ctbb_p13_n01.png"
+                frameNum="6"/>
+        <Sprite resource="hb_ctbb_p13_3.plist"
+                posx="186"
+                posy="607"
+                type="ActionRunForever"
+                frameName="hb_ctbb_p13_n2_01.png"
+                frameNum="6"/>
+        <Sprite resource="hb_ctbb_p13_4.plist"
+                posx="391"
+                posy="596"
+                type="ActionRunForever"
+                frameName="hb_ctbb_p13_n3_01.png"
+                frameNum="6"/>
+
+
+    </RelativeLayout>
+    <!--    14-->
+    <RelativeLayout>
+        <Music src="p14bg.mp3"/>
+        <Music src="p14hj.mp3"/>
+        <ImageView src="hb_ctbb_bj26.png" zorder="1"/>
+        <Sprite resource="hb_ctbb_p14_dai.plist"
+                posx="357"
+                posy="338"
+                type="ActionRunForever"
+                frameName="hb_ctbb_p14_dai01.png"
+                frameNum="16"/>
+
+
+    </RelativeLayout>
+</Page>
