@@ -3,14 +3,30 @@
 
 using namespace tinyxml2;
 
+void printValue(XMLNode *node) {
+    printf("%s\n", node->Value());
+}
+
+void printAllChildValue(XMLElement *element) {
+
+    while (element) {
+
+        printValue(element);
+        if (!element->NoChildren()) {
+            printAllChildValue(element->FirstChildElement());
+        }
+        element = element->NextSiblingElement();
+    }
+}
+
 int main() {
     XMLDocument doc;
     doc.LoadFile("/Users/bovink/Development/MyProject/CLionProject/LearnCPP/helloworld.xml");
 
-    const char *content = doc.FirstChildElement("Hello")->GetText();
-    const char *id = doc.FirstChildElement("Hello")->Attribute("id");
+    XMLElement *element = doc.FirstChildElement();
+    if (!element->NoChildren()) {
 
-    printf("id,%s\n", id);
-    printf("Hello,%s", content);
+        printAllChildValue(element);
+    }
     return 0;
 }
