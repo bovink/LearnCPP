@@ -21,7 +21,7 @@ void printAllChildValue(XMLElement *element) {
 
 int main() {
     XMLDocument doc;
-    doc.LoadFile("/Users/bovink/Development/MyProject/CLionProject/LearnCPP/helloworld.xml");
+    doc.LoadFile("/Users/bovink/Development/MyProject/CLionProject/LearnCPP/page.xml");
 
     XMLElement *element = doc.FirstChildElement()->FirstChildElement("Sprite");
     const char *posx = element->Attribute("posx");
