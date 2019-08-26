@@ -3,4 +3,4 @@ project(LearnCPP)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(LearnCPP main.cpp)
+add_executable(LearnCPP main.cpp vector/VectorTest.cpp vector/VectorTest.h)
