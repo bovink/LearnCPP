@@ -4,6 +4,8 @@
 #include <thread>
 #include <fstream>
 #include "Person.h"
+#include "Employee.h"
+#include "Manager.h"
 
 using namespace std;
 
@@ -21,10 +23,22 @@ void print(vector<double> v) {
 void test() {
 	cout << "go" << endl;
 }
+struct Managers {
+int a;
+Manager m;
+};
 int main() {
 	vector<double> vd(10);
 	print(vd);
 	print(vd);
+	auto manager = new Manager();
+	Managers ms;
+	ms.m.print();
+	cout << ms.a << endl;
+
+	double dd = -1;
+	string s = dd ? "true":"false";
+	cout << s <<endl;
 
 	int a = 10;
 	int* pint = &a;
