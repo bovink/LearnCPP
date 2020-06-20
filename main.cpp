@@ -1,5 +1,5 @@
 /*
- * Õâ¸ö·ÖÖ§Ö÷ÒªÓÃÀ´Ñ§Ï° C++ ÖÐ¹¹Ôìº¯ÊýÏà¹ØµÄÖªÊ¶
+ * è¿™ä¸ªåˆ†æ”¯ä¸»è¦ç”¨æ¥å­¦ä¹  C++ ä¸­æž„é€ å‡½æ•°ç›¸å…³çš„çŸ¥è¯†
  */
 
 #include "Employee.h"
@@ -14,17 +14,17 @@ struct family {
 
 int main() {
 
-//	auto e = new Employee(); // ±àÒëÆ÷±¨´í
-//	ÒòÎª Employee ÓÐÒ»¸ö¹¹Ôìº¯Êý£¬ËùÒÔÕâ¸öÀàµÄËùÓÐ¶ÔÏóµÄ³õÊ¼»¯¶¼±ØÐëÍ¨¹ýÕâ¸ö¹¹Ôìº¯ÊýÀ´½øÐÐ³õÊ¼»¯
+//	auto e = new Employee(); // ç¼–è¯‘å™¨æŠ¥é”™
+//	å› ä¸º Employee æœ‰ä¸€ä¸ªæž„é€ å‡½æ•°ï¼Œæ‰€ä»¥è¿™ä¸ªç±»çš„æ‰€æœ‰å¯¹è±¡çš„åˆå§‹åŒ–éƒ½å¿…é¡»é€šè¿‡è¿™ä¸ªæž„é€ å‡½æ•°æ¥è¿›è¡Œåˆå§‹åŒ–
 
 //	auto e1 = new Employee(1);
 //	auto e2 = new Employee(1, 1);
-//	¿ÉÒÔ¶¨Òå¶à¸ö¹¹Ôìº¯ÊýÀ´ÔÊÐíÍ¨¹ý¶àÖÖ·½Ê½³õÊ¼»¯Àà¶ÔÏó
+//	å¯ä»¥å®šä¹‰å¤šä¸ªæž„é€ å‡½æ•°æ¥å…è®¸é€šè¿‡å¤šç§æ–¹å¼åˆå§‹åŒ–ç±»å¯¹è±¡
 
 //	auto e3 = new Employee(1);
-//	¿ÉÒÔÍ¨¹ý¸ø¹¹Ôìº¯ÊýÌí¼ÓÄ¬ÈÏ²ÎÊýÀ´¼õÉÙ¹¹Ôìº¯ÊýµÄÊýÁ¿
-//	¾ÍÏñ Employee µÄ Employee(int, int, int) µÄ²ÎÊýÈ«¶¼ÓÐÄ¬ÈÏ²ÎÊýÊ±£¬
-//	Ëü¾Í¿ÉÒÔÈ¡´ú Employee(int) ºÍ Employee(int, int) ÕâÁ½¸ö¹¹Ôìº¯Êý
+//	å¯ä»¥é€šè¿‡ç»™æž„é€ å‡½æ•°æ·»åŠ é»˜è®¤å‚æ•°æ¥å‡å°‘æž„é€ å‡½æ•°çš„æ•°é‡
+//	å°±åƒ Employee çš„ Employee(int, int, int) çš„å‚æ•°å…¨éƒ½æœ‰é»˜è®¤å‚æ•°æ—¶ï¼Œ
+//	å®ƒå°±å¯ä»¥å–ä»£ Employee(int) å’Œ Employee(int, int) è¿™ä¸¤ä¸ªæž„é€ å‡½æ•°
 
 	family f;
 	f.p[0].print();
