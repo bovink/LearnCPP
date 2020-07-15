@@ -1,6 +1,8 @@
 
-
+#include "Director.h"
 int main() {
 
-    return 0;
+	auto director = new Director();
+	director->run();
+	return 0;
 }
