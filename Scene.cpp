@@ -12,15 +12,16 @@ using namespace std;
 Scene::Scene() {
 	// TODO Auto-generated constructor stub
 
+	a = 1111;
 }
 
 Scene::~Scene() {
 	// TODO Auto-generated destructor stub
 }
 
-void testPrintDirectorPrivate(Director* d){
+void testPrintDirectorPrivate(Scene* s){
 
-	cout << d->a << endl;
+	cout << s->a << endl;
 }
 
 

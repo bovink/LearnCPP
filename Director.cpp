@@ -23,7 +23,6 @@ void Director::run() {
 
 	cout << "run" << endl;
 	Scene* s = new Scene();
-	s->test
 
-	testPrintDirectorPrivate(this);
+	testPrintDirectorPrivate(s);
 }

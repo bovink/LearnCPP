@@ -7,7 +7,6 @@
 
 #ifndef SCENE_H_
 #define SCENE_H_
-#include "Director.h"
 
 class Scene {
 public:
