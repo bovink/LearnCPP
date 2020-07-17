@@ -8,18 +8,22 @@
 #include "Test.h"
 #include <iostream>
 
-void printf(const string& s) {
+void printf(const string &s) {
 	cout << s << endl;
 }
+
 Test::Test(string s) {
 	// TODO Auto-generated constructor stub
 	_s = s;
-	printf("构造");
+
+	string b = "构造:" + _s;
+	cout << b << endl;
 }
 
 Test::~Test() {
 	// TODO Auto-generated destructor stub
-	printf("析构");
+	string b = "析构:" + _s;
+	cout << b << endl;
 }
 
 void Test::print() {
