@@ -87,8 +87,8 @@ void testSharedPtrMap() {
 //	m["3"]->print();
 }
 
-int main() {
-	testSharedPtrMap();
-
-	return 0;
-}
+//int main() {
+//	testSharedPtrMap();
+//
+//	return 0;
+//}

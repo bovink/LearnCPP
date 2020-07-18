@@ -24,6 +24,7 @@ Test::~Test() {
 	// TODO Auto-generated destructor stub
 	string b = "析构:" + _s;
 	cout << b << endl;
+//	delete _ptrs;
 }
 
 void Test::print() {
@@ -31,3 +32,10 @@ void Test::print() {
 	cout << _s << endl;
 }
 
+void Test::printPtrs() {
+	_ptrs->print();
+}
+
+void Test::removePtrs() {
+	delete _ptrs;
+}

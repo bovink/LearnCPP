@@ -27,8 +27,16 @@ public:
 		_s = s;
 	}
 
+
+	void setPtrs( Test *ptrs) {
+		_ptrs = ptrs;
+	}
+
+	void printPtrs();
+	void removePtrs();
 private:
 	string _s;
+	Test* _ptrs;
 
 };
 
