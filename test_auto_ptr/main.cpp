@@ -5,12 +5,12 @@
  *      Author: Bovink
  */
 
-
 #include "Test.h"
 #include <memory>
 #include <iostream>
+#include <unordered_map>
 
-void testNormalPtr(){
+void testNormalPtr() {
 
 	auto t = new Test("123");
 	t->print();
@@ -42,7 +42,7 @@ void testAutoPtr() {
 	_t = _t2;
 	_t->print();
 	if (_t2.get() == NULL)
-		cout << "t2 is NULL" <<endl;
+		cout << "t2 is NULL" << endl;
 
 	auto t = new Test("aaa");
 	auto_ptr<Test> _t3(t);
@@ -51,9 +51,44 @@ void testAutoPtr() {
 	delete t;
 }
 
-int main() {
+using shareT= shared_ptr<Test>;
+void testSharedPtrMap() {
 
-	testAutoPtr();
+	unordered_map<string, shareT> m;
+	shared_ptr<Test> _m1(new Test("123"));
+	m["1"] = _m1;
+	shared_ptr<Test> _m2(new Test("456"));
+	m["2"] = _m2;
+	shared_ptr<Test> _m3(new Test("789"));
+	m["3"] = _m3;
+	cout << m["1"].use_count() << endl;
+//	cout << _m1.use_count() << endl;
+	m["1"].reset();
+	/*
+	 * 因为m["1"] 释放了指针，所以这个成员指针指向的使用索引就是0了。
+	 */
+	cout << m["1"].use_count() << endl;
+	m.erase("1");
+	cout << m["1"].use_count() << endl;
+//	cout << _m1.use_count() << endl;
+	_m1.reset();
+	cout << m["1"].use_count() << endl;
+//	cout << _m1.use_count() << endl;
+
+
+	for(auto n :m){
+		n.second->print();
+	}
+//	while(1){
+//
+//	}
+//	m["1"].reset();
+//	m["2"]->print();
+//	m["3"]->print();
+}
+
+int main() {
+	testSharedPtrMap();
 
 	return 0;
 }
