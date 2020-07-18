@@ -17,6 +17,15 @@ void testNormalPtr(){
 }
 
 void testAutoPtr() {
+	/*
+	 * auto_ptr 在 C++ 11 中已经被淘汰。
+	 * 智能指针可以通过 -> 直接访问指针成员。
+	 *
+	 * 成员方法：
+	 * get() 返回指针成员
+	 * reset(新指针) 释放原来持有的指针成员，将新指针作为新的指针成员，新指针参数可以为空。
+	 *
+	 */
 
 	auto_ptr<Test> _t(new Test("123"));
 	_t->setS("hello");
