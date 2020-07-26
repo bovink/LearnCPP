@@ -16,7 +16,7 @@ void testNormalPtr() {
 	 * 测试普通指针
 	 * 普通指针必须 new 与 delete 配对，不然不会释放内存
 	 */
-	cout << "==========测试普通纸质恩==========" << endl;
+	cout << "==========测试普通指针==========" << endl;
 	auto t = new Test("测试普通指针");
 	t->print();
 	delete t;
@@ -100,6 +100,47 @@ void testAutoPtr() {
 	cout << "==========测试结束==========" << endl;
 }
 
+unique_ptr<Test> test() {
+
+	return unique_ptr<Test>(new Test("测试123"));
+}
+
+void testUniquePtr() {
+	/*
+	 * unique在使用上和auto_ptr类似，但是多出了move方法，因为unique是独享指针的。
+	 * unique的出现淘汰了auto_ptr，本质上是高级的auto_ptr的感觉。
+	 */
+	cout << "==========move()测试==========" << endl;
+	auto t1 = new Test("测试123");
+	auto t2 = new Test("测试456");
+	unique_ptr<Test> _t1(t1);
+	unique_ptr<Test> _t2(t2);
+
+	_t1 = move(_t2); // 不能直接赋值,释放123，移动456
+
+	if (_t2 == NULL) {
+		cout << "_t2为NULL" << endl;
+	}
+
+	auto t = _t1.release(); // 456移动
+	if (_t1 == NULL) {
+		cout << "_t1为NULL" << endl;
+	}
+	t->print();
+	_t2.reset(t);
+	_t1 = unique_ptr<Test>(new Test("测试123")); // 移动构造函数
+	// 这里虽然被windows eclipse编译报错，但是能运行
+
+	_t1.swap(_t2);
+	_t1->print();
+	_t2->print();
+	/*
+	 * swap测试，交换两个指针的值
+	 */
+	cout << "==========测试结束==========" << endl;
+
+}
+
 using shareT= shared_ptr<Test>;
 void testSharedPtrMap() {
 
@@ -130,7 +171,7 @@ void testSharedPtrMap() {
 }
 
 int main() {
-	testNormalPtr();
+	testUniquePtr();
 
 	return 0;
 }
