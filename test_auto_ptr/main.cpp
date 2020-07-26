@@ -12,8 +12,14 @@
 
 void testNormalPtr() {
 
-	auto t = new Test("123");
+	/*
+	 * 测试普通指针
+	 * 普通指针必须 new 与 delete 配对，不然不会释放内存
+	 */
+	cout << "==========测试普通纸质恩==========" << endl;
+	auto t = new Test("测试普通指针");
 	t->print();
+	delete t;
 }
 
 void testAutoPtr() {
@@ -124,7 +130,7 @@ void testSharedPtrMap() {
 }
 
 int main() {
-	testAutoPtr();
+	testNormalPtr();
 
 	return 0;
 }
