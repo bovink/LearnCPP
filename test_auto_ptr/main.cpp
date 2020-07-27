@@ -141,6 +141,28 @@ void testUniquePtr() {
 
 }
 
+void testSharedPtr() {
+	/*
+	 * 从名字可以看出一个shared_ptr可以被指针多次引用。
+	 */
+	auto t1 = new Test("123");
+	auto t2 = new Test("456");
+
+	shared_ptr<Test> _t1(t1);
+	shared_ptr<Test> _t2(t2);
+
+	// t1被释放，t2被引用两次，即_t1引用一次，_t2引用一次
+	_t1 = _t2;
+	cout << _t1.use_count() << endl;
+	cout << _t2.use_count() << endl;
+	// _t1释放对t2的引用，_t1的自身成员指针消失。
+	_t1.reset();
+	cout << _t1.use_count() << endl;
+	cout << _t2.use_count() << endl;
+
+	cout << "==========测试结束==========" << endl;
+}
+
 using shareT= shared_ptr<Test>;
 void testSharedPtrMap() {
 
@@ -171,7 +193,6 @@ void testSharedPtrMap() {
 }
 
 int main() {
-	testUniquePtr();
-
+	testSharedPtr();
 	return 0;
 }
