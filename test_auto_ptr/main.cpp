@@ -192,7 +192,7 @@ void testSharedPtrMap() {
 //	}
 }
 
-int main() {
-	testSharedPtr();
-	return 0;
-}
+//int main() {
+//	testSharedPtr();
+//	return 0;
+//}
