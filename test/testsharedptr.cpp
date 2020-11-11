@@ -1,20 +1,18 @@
 /*
- * person.cpp
+ * testsharedptr.cpp
  *
  *  Created on: 2020年11月11日
  *      Author: Bovink
  */
 
-#include "person.h"
+#include "testsharedptr.h"
 
-person::person() {
+test_shared_ptr::test_shared_ptr() {
 	// TODO Auto-generated constructor stub
 
-	cout << "construct person" <<endl;
 }
 
-person::~person() {
+test_shared_ptr::~test_shared_ptr() {
 	// TODO Auto-generated destructor stub
-	cout << "deconstruct person" <<endl;
 }
 

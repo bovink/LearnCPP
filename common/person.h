@@ -8,6 +8,7 @@
 #ifndef PERSON_H_
 #define PERSON_H_
 
+#include "stdcommon.h"
 class person {
 public:
 	person();
