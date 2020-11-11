@@ -16,12 +16,12 @@ public:
 
 	void testVectorSharedPtr() {
 
-		vector<shared_ptr<person>> persons(5);
+		vector<shared_ptr<person> > persons(5);
 	}
 
 	void test2() {
 
-		vector<shared_ptr<person>> persons(5);
+		vector<shared_ptr<person> > persons(5);
 		persons.push_back(shared_ptr<person>(new person()));
 		_persons = persons;
 		persons.clear();
@@ -39,7 +39,7 @@ public:
 		_persons.clear();
 	}
 
-		vector<shared_ptr<person>> _persons;
+		vector<shared_ptr<person> > _persons;
 
 };
 
