@@ -40,6 +40,7 @@ int main() {
 //	char c = ifs.get();
 	char c = ifs.get();
 	while (ifs.good()){
+	    
 
 //		cout << ifs;
 		cout << c;
