@@ -41,6 +41,7 @@ void testStringFind() {
 	i = s.rfind("/");
 	print(&i);
 //	s.replace(s.begin(), s.end(), "a");
+
     /**
      *  @brief  Replace characters with multiple characters.
      *  @param __pos  Index of first character to replace.
