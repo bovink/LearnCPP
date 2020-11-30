@@ -19,7 +19,8 @@ struct Reading {
     Reading(int hour, double temperature) : hour(hour), temperature(temperature) {}
 };
 
-int main() {
+void practise() {
+
     cout << "Please enter input file name:";
     string name;
     cin >> name;
@@ -42,6 +43,9 @@ int main() {
         ofs << '(' << temps.at(i).hour << ','
             << temps.at(i).temperature << ")\n";
     }
-
 }
+
+//int main() {
+//    practise();
+//}
 
