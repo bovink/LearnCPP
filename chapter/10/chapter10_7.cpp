@@ -56,7 +56,7 @@ int get_int(int low, int high, const string &greeting, const string &sorry) {
     while (true) {
         int n = get_int();
         if (low <= n && n <= high) return n;
-        cout << sorry << ":[" << low << ':' << high << "\n";
+        cout << sorry << ":[" << low << ':' << high << "]\n";
     }
 }
 
