@@ -25,11 +25,17 @@ void practise() {
     string name;
     cin >> name;
     ifstream ifs(PATH + name);
-    if (!ifs) cerr << "File Not Exist: " << name;
+    if (!ifs) {
+        cerr << "File Not Exist: " << name;
+        return;
+    }
     cout << "Please enter name of output file:";
     cin >> name;
     ofstream ofs(PATH + name);
-    if (!ofs) cerr << "Can't open File " << name;
+    if (!ofs) {
+        cerr << "Can't open File " << name;
+        return;
+    }
 
     vector<Reading> temps;
     int hour;
@@ -47,5 +53,6 @@ void practise() {
 
 //int main() {
 //    practise();
+//    return 0;
 //}
 
