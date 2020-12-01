@@ -51,16 +51,25 @@ int get_int(int low, int high) {
 
 }
 
+int get_int(int low, int high, const string &greeting, const string &sorry) {
+    cout << greeting << ":[" << low << ':' << high << "]\n";
+    while (true) {
+        int n = get_int();
+        if (low <= n && n <= high) return n;
+        cout << sorry << ":[" << low << ':' << high << "\n";
+    }
+}
+
 void practise10_7() {
 
     // don't forget catch exception
     // cin will throw some exception with wrong input
-    get_int(10,20);
+    get_int(10, 20);
 }
 
 
-int main() {
-    practise10_7();
-
-    return 0;
-}
+//int main() {
+//    practise10_7();
+//
+//    return 0;
+//}
