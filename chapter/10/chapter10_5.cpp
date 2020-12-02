@@ -2,7 +2,6 @@
 // Created by 吴宗刚 on 2020-11-30.
 //
 
-#include "chapter10_5.h"
 #include <vector>
 #include <fstream>
 #include <iostream>
@@ -55,4 +54,3 @@ void practise() {
 //    practise();
 //    return 0;
 //}
-
