@@ -39,7 +39,7 @@ void practise10_9() {
          << d.day;
 }
 
-int main() {
-    practise10_9();
-    return 0;
-}
+//int main() {
+//    practise10_9();
+//    return 0;
+//}
