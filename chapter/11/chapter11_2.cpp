@@ -55,6 +55,22 @@ void output_float2() {
          << scientific << 1234.56789 << "\n";
 }
 
+void output_float3() {
+
+    cout << 1234.56789 << "\t\t\t"
+         << fixed << 1234.56789 << "\t\t"
+         << scientific << 1234.56789 << "\n";
+
+    cout << general << setprecision(5)
+         << 1234.56789 << "\t\t\t"
+         << fixed << 1234.56789 << "\t\t"
+         << scientific << 1234.56789 << "\n";
+
+    cout << general << setprecision(8)
+         << 1234.56789 << "\t\t"
+         << fixed << 1234.56789 << "\t"
+         << scientific << 1234.56789 << "\n";
+}
 
 void test11_1() {
 
@@ -66,7 +82,7 @@ void test11_1() {
 //    input_int();
 
     // output float
-    output_float2();
+    output_float3();
 }
 
 int main() {
