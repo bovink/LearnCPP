@@ -72,6 +72,22 @@ void output_float3() {
          << scientific << 1234.56789 << "\n";
 }
 
+void output_width() {
+    cout << 123456
+         << '|' << setw(4) << 123456 << '|'
+         << setw(8) << 123456 << '|'
+         << 123456 << "|\n";
+
+    // setw only add hold for less width
+
+    cout << 12345 << '|' << setw(4) << 12345 << '|'
+         << setw(8) << 12345 << '|' << 12345 << "|\n";
+    cout << 1234.5 << '|' << setw(4) << 1234.5 << '|'
+         << setw(8) << 1234.5 << '|' << 1234.5 << "|\n";
+    cout << "asdfg" << '|' << setw(4) << "asdfg" << '|'
+         << setw(8) << "asdfg" << '|' << "asdfg" << "|\n";
+}
+
 void test11_1() {
 
 
@@ -82,10 +98,11 @@ void test11_1() {
 //    input_int();
 
     // output float
-    output_float3();
+//    output_float3();
+    output_width();
 }
 
-int main() {
-    test11_1();
-    return 0;
-}
+//int main() {
+//    test11_1();
+//    return 0;
+//}
