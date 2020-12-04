@@ -30,14 +30,14 @@ void test_binary() {
     cin >> name;
     ifstream ifs(name.c_str(), ios_base::binary);
     if (!ifs) {
-        cerr << "can't open input file ", name);
+        cerr << "can't open input file " << name;
         return;
     }
     cout << "Please enter output file name\n";
     cin >> name;
     ofstream ofs(name.c_str(), ios_base::binary);
     if (!ofs) {
-        cerr << "can't open output file ", name);
+        cerr << "can't open output file " << name;
         return;
     }
 
@@ -52,8 +52,26 @@ void test_binary() {
     }
 }
 
+void output_binary() {
+
+    string path = "G:\\Project\\CLionProjects\\LearnCPP\\";
+    ofstream ofs(path + "somefile.txt", ios_base::binary);
+    int i = 1234;
+    ofs.write((char*)&i,sizeof(int));
+}
+
+void input_binary() {
+
+    string path = "G:\\Project\\CLionProjects\\LearnCPP\\";
+    ifstream ifs(path + "somefile.txt", ios_base::binary);
+    int i;
+    while (ifs.read(as_bytes(i), sizeof(int)))
+        cout << i;
+}
+
 void test11_3() {
-    input_app();
+//    output_binary();
+    input_binary();
 //    file_not_exist();
 }
 
