@@ -1,0 +1,43 @@
+{
+  "biz_result": {
+    "list": [
+      {
+        "voiceUrl": "http://lessonvideo.dolphinmedia.cn/41877f5d219741ee9e1a61078c8997f0/f4e250d486624b4dbef5c2492994820b-a5614e3c967be87911f1238c243f6c53-sq.mp3",
+        "duration": "12.2514",
+        "createTime": "2020-12-04 10:37:56"
+      },
+      {
+        "voiceUrl": "http://lessonvideo.dolphinmedia.cn/ac81c2469487405a876bba4a6697cbed/b5d8b7d29c09421db23b564dd4f134bc-1fe8ff7b40e451b673ffbb353f5743a0-sq.mp3",
+        "duration": "5.7731",
+        "createTime": "2020-12-04 10:35:19"
+      },
+      {
+        "voiceUrl": "http://lessonvideo.dolphinmedia.cn/43e155de132a47d1acc9fcf54c1e1602/21cfd0fd27d94ca99da9b20f11fd08d0-3a7aac854da3f7f510f74c1b2788a822-sq.mp3",
+        "duration": "76.3298",
+        "createTime": "2020-12-04 10:34:31"
+      },
+      {
+        "voiceUrl": "http://lessonvideo.dolphinmedia.cn/39ab6807c6954de6bace05e83a1f4839/065f8df87783478e818a1b3f5df6cba4-3a7aac854da3f7f510f74c1b2788a822-sq.mp3",
+        "duration": "76.3298",
+        "createTime": "2020-12-04 10:34:22"
+      },
+      {
+        "voiceUrl": "http://lessonvideo.dolphinmedia.cn/986adc0ab8574b16b46937868b698245/e22ddf0466ea43e4be6e1c2713bc880d-07951290dbd868f55e15df324a89f096-sq.mp3",
+        "duration": "8.5682",
+        "createTime": "2020-12-03 14:44:07"
+      },
+      {
+        "voiceUrl": "http://lessonvideo.dolphinmedia.cn/ed62ef703fed4921b48dc76836d1c6c9/f0fb0cfaab584c5ea1cd796e356c5abf-45d4a49e7e569ea253f728391f51030f-sq.mp3",
+        "duration": "2.9257",
+        "createTime": "2020-12-03 17:17:26"
+      },
+      {
+        "voiceUrl": "http://lessonvideo.dolphinmedia.cn/21473f658ebb492fb224fef411b90385/48e6bd9ef1d44f57a975144f2f3a3785-efae06a9f232df625341a930c846da17-sq.mp3",
+        "duration": "4.2057",
+        "createTime": "2020-12-03 17:06:25"
+      }
+    ]
+  },
+  "code": "1c01",
+  "msg": "操作处理成功"
+}

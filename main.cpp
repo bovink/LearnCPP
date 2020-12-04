@@ -7,11 +7,29 @@
 using namespace std;
 using json = nlohmann::json;
 
-int main() {
-    string path = "/Users/bovink/Development/MyProject/CppProject/LearnCPP/json.txt";
+void parse_list(ifstream &ifs) {
 
-    ifstream ifs(path);
-    if (!ifs) return 1;
+    stringstream ss;
+    ifs >> ss.rdbuf();
+    string content(ss.str());
+
+    cout << content << endl;
+    cout << "<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"<<endl;
+    json j = json::parse(content);
+    json list = j["biz_result"]["list"];
+    for (int i = 0; i < list.size(); ++i) {
+
+        int d =-1;
+        string s = list.at(i).at("duration").get<string>();
+        istringstream iss(s);
+        iss>>d;
+        cout << d << endl;
+    }
+    cout << list.dump() << endl;
+}
+
+void parse_json(ifstream &ifs) {
+
     stringstream ss;
     ifs >> ss.rdbuf();
 
@@ -32,7 +50,15 @@ int main() {
     }
     cout << msg << ":msg" << '\n'
          << code << ":code" << '\n';
+}
 
+int main() {
+
+    string path = "/Users/bovink/Development/MyProject/CppProject/LearnCPP/json1.txt";
+
+    ifstream ifs(path);
+    if (!ifs) return 1;
+    parse_list(ifs);
     return 0;
 }
 
