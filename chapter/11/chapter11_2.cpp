@@ -2,7 +2,7 @@
 // Created by Bovink on 2020/12/2.
 //
 
-#include "../../std_lib_facilities.h"
+#include "std_lib_facilities.h"
 
 inline ios_base &general(ios_base &b) {
     b.setf(ios_base::fmtflags(0), ios_base::floatfield);

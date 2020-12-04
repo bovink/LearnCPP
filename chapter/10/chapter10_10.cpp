@@ -2,7 +2,7 @@
 // Created by 吴宗刚 on 2020-12-01.
 //
 
-#include "../../std_lib_facilities.h"
+#include "std_lib_facilities.h"
 
 void practise10_10() {
     string name = "raw.txt";
